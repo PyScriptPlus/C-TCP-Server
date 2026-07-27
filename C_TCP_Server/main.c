@@ -10,7 +10,7 @@
 
 void receiveCl(int *sockClient) {
 
-	char buff[1024];
+	char buff[MAX];
 	int bytes = recv(*sockClient, buff, sizeof(buff) - 1, 0);
 	if(bytes > 0)
 	{
