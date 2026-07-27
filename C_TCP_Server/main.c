@@ -4,6 +4,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
+#include <unistd.h>
 
 #define PORT 2525
 #define MAX 1024
@@ -66,6 +67,8 @@ int main() {
 	}
 
 	receiveCl(&sockClient);
+
+	close(sockfd);
 
 	return 0;
 }
